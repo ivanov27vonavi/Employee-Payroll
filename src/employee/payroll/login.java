@@ -5,6 +5,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Date;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -26,7 +29,25 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         initComponents();
-        conn = db.java_db();
+        conn = db.java_db(); 
+        currentDate();
+    }
+    
+    public void currentDate(){
+        
+        Calendar cal = new GregorianCalendar();
+        int month = cal.get(Calendar.MONTH);
+        int year = cal.get(Calendar.YEAR);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        
+        lbl_date.setText((month + 1) + "/" + day+ "/" + year);
+        
+        int second = cal.get(Calendar.SECOND);
+        int minute = cal.get(Calendar.MINUTE);
+        int hour = cal.get(Calendar.HOUR);
+        
+        lbl_time.setText(hour + ":" + (minute) + ":" + second);
+                
     }
 
     /**
@@ -38,6 +59,9 @@ public class login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -46,6 +70,16 @@ public class login extends javax.swing.JFrame {
         txt_combobox = new javax.swing.JComboBox<>();
         txt_username = new javax.swing.JTextField();
         txt_password = new javax.swing.JTextField();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu4 = new javax.swing.JMenu();
+        lbl_date = new javax.swing.JMenu();
+        lbl_time = new javax.swing.JMenu();
+
+        jMenu1.setText("jMenu1");
+
+        jMenu2.setText("jMenu2");
+
+        jMenu3.setText("jMenu3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -71,6 +105,17 @@ public class login extends javax.swing.JFrame {
                 txt_passwordActionPerformed(evt);
             }
         });
+
+        jMenu4.setText("File");
+        jMenuBar1.add(jMenu4);
+
+        lbl_date.setText("Date");
+        jMenuBar1.add(lbl_date);
+
+        lbl_time.setText("Time");
+        jMenuBar1.add(lbl_time);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,7 +143,7 @@ public class login extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(227, Short.MAX_VALUE)
+                .addContainerGap(206, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -210,6 +255,13 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu lbl_date;
+    private javax.swing.JMenu lbl_time;
     private javax.swing.JComboBox<String> txt_combobox;
     private javax.swing.JTextField txt_password;
     private javax.swing.JTextField txt_username;
