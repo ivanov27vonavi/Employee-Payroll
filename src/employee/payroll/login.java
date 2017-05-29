@@ -1,6 +1,8 @@
 package employee.payroll;
 
 import employee.payroll.db;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,6 +31,10 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         initComponents();
+        Toolkit toolkit = getToolkit();
+        Dimension size = toolkit.getScreenSize();
+        setLocation(size.width/2 - getWidth()/2, size.height/2 - getHeight()/2);
+        
         conn = db.java_db(); 
         currentDate();
     }
@@ -181,6 +187,8 @@ public class login extends javax.swing.JFrame {
             rs = pst.executeQuery();
 
             while (rs.next()) {
+                int id = rs.getInt(1);
+                Emp.empId = id;
                 count = count + 1;
             }
             String asses = (txt_combobox.getSelectedItem().toString());
