@@ -57,21 +57,21 @@ public class addEmployee extends javax.swing.JFrame {
     private void initComponents() {
 
         txt_id = new javax.swing.JTextField();
-        txt_firstname = new javax.swing.JTextField();
+        txt_first_name = new javax.swing.JTextField();
         txt_surname = new javax.swing.JTextField();
         txt_dob = new javax.swing.JTextField();
         txt_apt = new javax.swing.JTextField();
-        txt_pc = new javax.swing.JTextField();
+        txt_Post_code = new javax.swing.JTextField();
         txt_dep = new javax.swing.JTextField();
-        txt_design = new javax.swing.JTextField();
+        txt_Designation = new javax.swing.JTextField();
         txt_status = new javax.swing.JTextField();
-        txt_salary = new javax.swing.JTextField();
+        txt_Salary = new javax.swing.JTextField();
         txt_job = new javax.swing.JTextField();
         txt_doj = new javax.swing.JTextField();
         txt_email = new javax.swing.JTextField();
         txt_tel = new javax.swing.JTextField();
         txt_address = new javax.swing.JTextField();
-        txt_add2 = new javax.swing.JTextField();
+        txt_Address2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -88,16 +88,17 @@ public class addEmployee extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btn_AddRecordToDB = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         r_male = new javax.swing.JRadioButton();
         r_female = new javax.swing.JRadioButton();
-        jButton2 = new javax.swing.JButton();
+        btn_Clear = new javax.swing.JButton();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         img = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        btn_attach = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         txt_search = new javax.swing.JTextField();
+        btn_delete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,10 +134,10 @@ public class addEmployee extends javax.swing.JFrame {
 
         jLabel16.setText("Status:");
 
-        jButton1.setText("Add Record");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_AddRecordToDB.setText("Add Record");
+        btn_AddRecordToDB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_AddRecordToDBActionPerformed(evt);
             }
         });
 
@@ -156,10 +157,10 @@ public class addEmployee extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Clear");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn_Clear.setText("Clear");
+        btn_Clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn_ClearActionPerformed(evt);
             }
         });
 
@@ -182,18 +183,30 @@ public class addEmployee extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButton3.setText("Attach");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btn_attach.setText("Attach");
+        btn_attach.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btn_attachActionPerformed(evt);
             }
         });
 
         jLabel18.setText("Search Employee:");
 
+        txt_search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_searchActionPerformed(evt);
+            }
+        });
         txt_search.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_searchKeyReleased(evt);
+            }
+        });
+
+        btn_delete.setText("Delete");
+        btn_delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_deleteActionPerformed(evt);
             }
         });
 
@@ -222,13 +235,13 @@ public class addEmployee extends javax.swing.JFrame {
                         .addGap(39, 39, 39)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txt_id, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_firstname, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_first_name, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_surname, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_dob, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_email, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_tel, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_address, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_add2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_Address2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(r_male)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -236,11 +249,13 @@ public class addEmployee extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn_AddRecordToDB, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn_Clear, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btn_attach, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btn_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel9)
@@ -257,11 +272,11 @@ public class addEmployee extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(txt_job, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txt_design, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txt_salary, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txt_Designation, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txt_Salary, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(txt_doj, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(txt_apt, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txt_pc, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txt_Post_code, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(txt_dep, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(36, 36, 36)
                                         .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
@@ -282,7 +297,7 @@ public class addEmployee extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txt_firstname, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_first_name, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -311,7 +326,7 @@ public class addEmployee extends javax.swing.JFrame {
                             .addComponent(jLabel7))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txt_add2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_Address2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8))
                         .addGap(95, 95, 95))
                     .addGroup(layout.createSequentialGroup()
@@ -322,7 +337,7 @@ public class addEmployee extends javax.swing.JFrame {
                                     .addComponent(jLabel9))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txt_pc, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt_Post_code, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel10))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -330,7 +345,7 @@ public class addEmployee extends javax.swing.JFrame {
                                     .addComponent(jLabel11))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txt_design, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt_Designation, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel12))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -338,7 +353,7 @@ public class addEmployee extends javax.swing.JFrame {
                                     .addComponent(jLabel13))
                                 .addGap(16, 16, 16)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txt_salary, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt_Salary, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel14))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -351,26 +366,28 @@ public class addEmployee extends javax.swing.JFrame {
                             .addComponent(jLabel16))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_AddRecordToDB, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_Clear, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_attach, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(30, 30, 30))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_AddRecordToDBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AddRecordToDBActionPerformed
 
         try {
             String sql = "insert into Staff_information "
                     + "(first_name,surname,Dob,Email,"
                     + "Telephone,Address,Department, "
-                    + "Image,Salary,Gender,Address2, "
-                    + "Post_code, Designation, Status,job_title,Apartment,Date_hired) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                    + "Image,Salary,gender,Address2, "
+                    + "Post_code,Designation,"
+                    + "Status,job_title,Apartment,Date_hired) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
             pst = conn.prepareStatement(sql);
-            pst.setString(1, txt_firstname.getText());
+            pst.setString(1, txt_first_name.getText());
             pst.setString(2, txt_surname.getText());
             pst.setString(3, txt_dob.getText());
             pst.setString(4, txt_email.getText());
@@ -380,16 +397,16 @@ public class addEmployee extends javax.swing.JFrame {
             
             pst.setBytes(8, person_image);
 
-            pst.setString(9, txt_salary.getText());
+            pst.setString(9, txt_Salary.getText());
             pst.setString(10, gender);
 
-            pst.setString(10, txt_add2.getText());
-            pst.setString(1, txt_pc.getText());
-            pst.setString(1, txt_design.getText());
-            pst.setString(1, txt_status.getText());
-            pst.setString(1, txt_job.getText());
-            pst.setString(1, txt_apt.getText());
-            pst.setString(1, txt_doj.getText());
+            pst.setString(11, txt_Address2.getText());
+            pst.setString(12, txt_Post_code.getText());
+            pst.setString(13, txt_Designation.getText());
+            pst.setString(14, txt_status.getText());
+            pst.setString(15, txt_job.getText());
+            pst.setString(16, txt_apt.getText());
+            pst.setString(17, txt_doj.getText());
 
             pst.execute();
             JOptionPane.showMessageDialog(null, "Data is seved succsessfully!");
@@ -405,7 +422,7 @@ public class addEmployee extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, e);
             }
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_AddRecordToDBActionPerformed
 
     private void r_maleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r_maleActionPerformed
 
@@ -423,29 +440,29 @@ public class addEmployee extends javax.swing.JFrame {
 
     }//GEN-LAST:event_r_femaleActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btn_ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ClearActionPerformed
         // TODO add your handling code here:
 
         txt_id.setText("");
-        txt_add2.setText("");
+        txt_Address2.setText("");
         txt_address.setText("");
         txt_apt.setText("");
         txt_dep.setText("");
-        txt_design.setText("");
+        txt_Designation.setText("");
         txt_dob.setText("");
         txt_doj.setText("");
         txt_email.setText("");
-        txt_firstname.setText("");
+        txt_first_name.setText("");
         txt_job.setText("");
-        txt_pc.setText("");
-        txt_salary.setText("");
+        txt_Post_code.setText("");
+        txt_Salary.setText("");
         txt_status.setText("");
         txt_surname.setText("");
         txt_tel.setText("");
 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btn_ClearActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btn_attachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_attachActionPerformed
         // TODO add your handling code here:
         
         JFileChooser chooser = new JFileChooser();
@@ -471,7 +488,7 @@ public class addEmployee extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,e);
         }
         
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btn_attachActionPerformed
 
     private void txt_searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_searchKeyReleased
         // TODO add your handling code here:
@@ -487,7 +504,7 @@ public class addEmployee extends javax.swing.JFrame {
                 txt_id.setText(add1);
                 
                 String add2 = rs.getString("first_name");
-                txt_firstname.setText(add2);
+                txt_first_name.setText(add2);
                 
                 String add3 = rs.getString("surname");
                 txt_surname.setText(add3);
@@ -507,20 +524,21 @@ public class addEmployee extends javax.swing.JFrame {
                 String add8 = rs.getString("Department");
                 txt_dep.setText(add8);
                 
-                String add9 = rs.getString("Gender");
-                txt_dep.setText(add9);
+                //String add9 = rs.getString("Gender"); 
+                //gender.; 
+                //как сделать setText()  для Radio Button ?
                 
                 String add10 = rs.getString("Salary");
-                txt_salary.setText(add10);
+                txt_Salary.setText(add10);
                 
-                String add11 = rs.getString("Address2");
-                txt_add2.setText(add11);
+                String add11 = rs.getString("Address 2");
+                txt_Address2.setText(add11);
                 
                 String add12 = rs.getString("Apartment");
                 txt_apt.setText(add12);
                 
                 String add13 = rs.getString("Post-code");
-                txt_pc.setText(add13);
+                txt_Post_code.setText(add13);
                 
                 String add14 = rs.getString("Status");
                 txt_status.setText(add14);
@@ -528,11 +546,13 @@ public class addEmployee extends javax.swing.JFrame {
                 String add15 = rs.getString("Date_hired");
                 txt_doj.setText(add15);
                 
-                String add16 = rs.getString("jaob_title");
+                String add16 = rs.getString("job_title");
                 txt_job.setText(add16);
                 
                 String add17 = rs.getString("Designation");
-                txt_design.setText(add17);
+                txt_Designation.setText(add17);
+                
+                
                 
                 byte[] image = rs.getBytes("Image");
                 ImageIcon imageIcon = new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(img.getWidth(), img.getHeight(), img.getWidth()));
@@ -554,6 +574,41 @@ public class addEmployee extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_txt_searchKeyReleased
+
+    private void txt_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_searchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_searchActionPerformed
+
+    private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
+        // TODO add your handling code here:
+        
+        try {
+            
+            String sql = "delete from Staff_information where id =?";
+            pst = conn.prepareStatement(sql);
+            pst.setString(1,txt_id.getText());
+            pst.execute();
+            
+            JOptionPane.showMessageDialog(null, "Record Deleted");
+            
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }finally {
+            
+            try {
+                rs.close();
+                pst.close();
+            } catch (Exception e) {
+            }
+        }
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_btn_deleteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -591,10 +646,11 @@ public class addEmployee extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_AddRecordToDB;
+    private javax.swing.JButton btn_Clear;
+    private javax.swing.JButton btn_attach;
+    private javax.swing.JButton btn_delete;
     private javax.swing.JLabel img;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -616,19 +672,19 @@ public class addEmployee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JRadioButton r_female;
     private javax.swing.JRadioButton r_male;
-    private javax.swing.JTextField txt_add2;
+    private javax.swing.JTextField txt_Address2;
+    private javax.swing.JTextField txt_Designation;
+    private javax.swing.JTextField txt_Post_code;
+    private javax.swing.JTextField txt_Salary;
     private javax.swing.JTextField txt_address;
     private javax.swing.JTextField txt_apt;
     private javax.swing.JTextField txt_dep;
-    private javax.swing.JTextField txt_design;
     private javax.swing.JTextField txt_dob;
     private javax.swing.JTextField txt_doj;
     private javax.swing.JTextField txt_email;
-    private javax.swing.JTextField txt_firstname;
+    private javax.swing.JTextField txt_first_name;
     private javax.swing.JTextField txt_id;
     private javax.swing.JTextField txt_job;
-    private javax.swing.JTextField txt_pc;
-    private javax.swing.JTextField txt_salary;
     private javax.swing.JTextField txt_search;
     private javax.swing.JTextField txt_status;
     private javax.swing.JTextField txt_surname;

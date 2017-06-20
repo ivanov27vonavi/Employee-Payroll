@@ -46,13 +46,13 @@
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="txt_id" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                          <Component id="txt_firstname" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="txt_first_name" min="-2" pref="136" max="-2" attributes="0"/>
                           <Component id="txt_surname" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
                           <Component id="txt_dob" min="-2" pref="136" max="-2" attributes="0"/>
                           <Component id="txt_email" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
                           <Component id="txt_tel" min="-2" pref="136" max="-2" attributes="0"/>
                           <Component id="txt_address" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                          <Component id="txt_add2" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="txt_Address2" min="-2" pref="136" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="r_male" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
@@ -62,11 +62,13 @@
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jButton1" min="-2" pref="101" max="-2" attributes="0"/>
+                              <Component id="btn_AddRecordToDB" min="-2" pref="101" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton2" min="-2" pref="95" max="-2" attributes="0"/>
+                              <Component id="btn_Clear" min="-2" pref="95" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jButton3" min="-2" pref="85" max="-2" attributes="0"/>
+                              <Component id="btn_attach" min="-2" pref="85" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btn_delete" min="-2" pref="93" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -85,11 +87,11 @@
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="txt_job" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                                          <Component id="txt_design" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                                          <Component id="txt_salary" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                                          <Component id="txt_Designation" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                                          <Component id="txt_Salary" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
                                           <Component id="txt_doj" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
                                           <Component id="txt_apt" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                                          <Component id="txt_pc" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                                          <Component id="txt_Post_code" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
                                           <Component id="txt_dep" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
@@ -121,7 +123,7 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txt_firstname" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="txt_first_name" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -157,7 +159,7 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txt_add2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="txt_Address2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
@@ -171,7 +173,7 @@
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txt_pc" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="txt_Post_code" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -181,7 +183,7 @@
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txt_design" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="txt_Designation" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                                   <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -191,7 +193,7 @@
                               </Group>
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txt_salary" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="txt_Salary" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                                   <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -209,9 +211,10 @@
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="jButton2" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="jButton3" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="btn_AddRecordToDB" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="btn_Clear" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="btn_attach" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="btn_delete" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
@@ -223,7 +226,7 @@
   <SubComponents>
     <Component class="javax.swing.JTextField" name="txt_id">
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_firstname">
+    <Component class="javax.swing.JTextField" name="txt_first_name">
     </Component>
     <Component class="javax.swing.JTextField" name="txt_surname">
     </Component>
@@ -231,15 +234,15 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txt_apt">
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_pc">
+    <Component class="javax.swing.JTextField" name="txt_Post_code">
     </Component>
     <Component class="javax.swing.JTextField" name="txt_dep">
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_design">
+    <Component class="javax.swing.JTextField" name="txt_Designation">
     </Component>
     <Component class="javax.swing.JTextField" name="txt_status">
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_salary">
+    <Component class="javax.swing.JTextField" name="txt_Salary">
     </Component>
     <Component class="javax.swing.JTextField" name="txt_job">
     </Component>
@@ -251,7 +254,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txt_address">
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_add2">
+    <Component class="javax.swing.JTextField" name="txt_Address2">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
@@ -333,12 +336,12 @@
         <Property name="text" type="java.lang.String" value="Status:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="btn_AddRecordToDB">
       <Properties>
         <Property name="text" type="java.lang.String" value="Add Record"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_AddRecordToDBActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel17">
@@ -362,12 +365,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="r_femaleActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="btn_Clear">
       <Properties>
         <Property name="text" type="java.lang.String" value="Clear"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ClearActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JDesktopPane" name="jDesktopPane1">
@@ -397,12 +400,12 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="btn_attach">
       <Properties>
         <Property name="text" type="java.lang.String" value="Attach"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_attachActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel18">
@@ -412,7 +415,16 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txt_search">
       <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_searchActionPerformed"/>
         <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_searchKeyReleased"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn_delete">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Delete"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_deleteActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
