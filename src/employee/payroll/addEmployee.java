@@ -395,13 +395,15 @@ public class addEmployee extends javax.swing.JFrame {
 
     private void btn_AddRecordToDBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AddRecordToDBActionPerformed
 
+        int x = JOptionPane.showConfirmDialog(null, "Are you sure you want  to add  record ?", "Add Record", JOptionPane.YES_NO_OPTION);
+        if(x==0){
         try {
             String sql = "insert into Staff_information "
                     + "(first_name,surname,Dob,Email,"
                     + "Telephone,Address,Department, "
                     + "Image,Salary,gender,Address2, "
                     + "Post_code,Designation,"
-                    + "Status,job_title,Apartment,Date_hired) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                    + "Status,job_title,Apartment,Date_hired) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
             pst = conn.prepareStatement(sql);
             pst.setString(1, txt_first_name.getText());
@@ -436,9 +438,11 @@ public class addEmployee extends javax.swing.JFrame {
                 rs.close();
                 pst.close();
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, e);
+                
             }
         }
+        }
+        
     }//GEN-LAST:event_btn_AddRecordToDBActionPerformed
 
     private void r_maleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r_maleActionPerformed
@@ -476,6 +480,8 @@ public class addEmployee extends javax.swing.JFrame {
         txt_status.setText("");
         txt_surname.setText("");
         txt_tel.setText("");
+        txt_search.setText("");
+        
 
     }//GEN-LAST:event_btn_ClearActionPerformed
 
@@ -511,7 +517,7 @@ public class addEmployee extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         try {
-            String sql = "select * from Staff_information where id =? ";
+            String sql = "select * from Staff_information where id = ? ";
             
             pst = conn.prepareStatement(sql);
             pst.setString(1, txt_search.getText());
@@ -541,20 +547,23 @@ public class addEmployee extends javax.swing.JFrame {
                 String add8 = rs.getString("Department");
                 txt_department.setText(add8);
                 
-                //String add9 = rs.getString("Gender"); 
-                //gender.; 
+                
                 //как сделать setText()  для Radio Button ?
+                
+                String add9 = rs.getString("Gender"); 
+                txt_department.setText(add9);
+                
                 
                 String add10 = rs.getString("Salary");
                 txt_salary.setText(add10);
                 
-                String add11 = rs.getString("Address 2");
+                String add11 = rs.getString("Address2");
                 txt_address2.setText(add11);
                 
                 String add12 = rs.getString("Apartment");
                 txt_apt.setText(add12);
                 
-                String add13 = rs.getString("Post-code");
+                String add13 = rs.getString("Post_code");
                 txt_post_code.setText(add13);
                 
                 String add14 = rs.getString("Status");
@@ -578,6 +587,7 @@ public class addEmployee extends javax.swing.JFrame {
             
         } catch (Exception e) {
             
+            
         }
         finally{
             
@@ -585,6 +595,8 @@ public class addEmployee extends javax.swing.JFrame {
                 rs.close();
                 pst.close();
             } catch (Exception e) {
+                
+                
                 
             }
         }
@@ -598,6 +610,9 @@ public class addEmployee extends javax.swing.JFrame {
 
     private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
         // TODO add your handling code here:
+        
+        int x = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete  record ?", "Delete Record", JOptionPane.YES_NO_OPTION);
+        if(x==0){
         
         try {
             
@@ -619,17 +634,16 @@ public class addEmployee extends javax.swing.JFrame {
             } catch (Exception e) {
             }
         }
-        
-        
-        
-        
-        
+        }
+   
         
     }//GEN-LAST:event_btn_deleteActionPerformed
 
     private void btn_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateActionPerformed
         // TODO add your handling code here:
         
+        int x = JOptionPane.showConfirmDialog(null, "Are you sure you want  to update  record ?", "Update Record", JOptionPane.YES_NO_OPTION);
+        if(x==0){
         
         try {
             
@@ -669,6 +683,7 @@ public class addEmployee extends javax.swing.JFrame {
                 
             } catch (Exception e) {
             }
+        }
         }
     }//GEN-LAST:event_btn_updateActionPerformed
 
