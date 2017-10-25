@@ -61,55 +61,41 @@
                       </Group>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txt_status" min="-2" pref="136" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txt_job" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                                          <Component id="txt_designation" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                                          <Component id="txt_salary" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                                          <Component id="txt_doj" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                                          <Component id="txt_apt" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                                          <Component id="txt_post_code" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                                          <Component id="txt_department" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                      <Component id="jDesktopPane1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="btn_AddRecordToDB" min="-2" pref="101" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btn_Clear" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="btn_attach" min="-2" pref="85" max="-2" attributes="0"/>
-                                      <Component id="btn_delete" min="-2" pref="93" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
-                                      <Component id="btn_update" min="-2" pref="93" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
+                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txt_job" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="txt_designation" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="txt_salary" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="txt_doj" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="txt_apt" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="txt_post_code" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="txt_department" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="txt_status" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="btn_attach" max="32767" attributes="0"/>
+                          <Component id="jDesktopPane1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="244" max="-2" attributes="0"/>
+                      <Component id="btn_AddRecordToDB" min="-2" pref="101" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="btn_update" min="-2" pref="93" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="btn_Clear" min="-2" pref="95" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="btn_delete" min="-2" pref="93" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="71" max="32767" attributes="0"/>
@@ -218,17 +204,14 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_status" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                           <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_attach" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btn_AddRecordToDB" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="btn_update" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace pref="60" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btn_Clear" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="btn_attach" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
                           <Component id="btn_delete" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="btn_AddRecordToDB" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="btn_update" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
@@ -416,7 +399,7 @@
     </Container>
     <Component class="javax.swing.JButton" name="btn_attach">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Attach"/>
+        <Property name="text" type="java.lang.String" value="Attach photo"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_attachActionPerformed"/>

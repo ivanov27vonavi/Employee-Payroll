@@ -189,6 +189,8 @@ public class login extends javax.swing.JFrame {
             while (rs.next()) {
                 int id = rs.getInt(1);
                 Emp.empId = id;
+                String username = rs.getString("username");
+                Emp.empname = username;
                 count = count + 1;
             }
             String asses = (txt_combobox.getSelectedItem().toString());
